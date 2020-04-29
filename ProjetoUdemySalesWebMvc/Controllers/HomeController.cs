@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoUdemySalesWebMvc.Models;
+using ProjetoUdemySalesWebMvc.Models.ViewModels;
 
 namespace ProjetoUdemySalesWebMvc.Controllers
 {
