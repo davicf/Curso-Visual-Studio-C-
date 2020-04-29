@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using ProjetoUdemySalesWebMvc.Data;
 
 namespace ProjetoUdemySalesWebMvc
 {
@@ -33,6 +35,9 @@ namespace ProjetoUdemySalesWebMvc
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<ProjetoUdemySalesWebMvcContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ProjetoUdemySalesWebMvcContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
