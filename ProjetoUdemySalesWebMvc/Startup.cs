@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using ProjetoUdemySalesWebMvc.Data;
+using ProjetoUdemySalesWebMvc.Services;
 
 namespace ProjetoUdemySalesWebMvc
 {
@@ -41,6 +42,7 @@ namespace ProjetoUdemySalesWebMvc
                     builder.MigrationsAssembly("ProjetoUdemySalesWebMvc")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
